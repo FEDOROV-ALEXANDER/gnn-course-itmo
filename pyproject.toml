@@ -1,0 +1,25 @@
+[project]
+name = "gnn-course-itmo"
+version = "0.1.0"
+description = "Environment for GNN course exercises and homework"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "ipykernel",
+    "ipywidgets>=8.1.9",
+    "jupyterlab",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "pytest",
+    "scikit-learn",
+    "torch==2.14.1+cu126",
+    "torch-geometric==2.8.1",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
